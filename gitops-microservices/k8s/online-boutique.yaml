@@ -354,6 +354,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
+
     app: frontend
   ports:
   - name: http
@@ -367,6 +368,7 @@ metadata:
   labels:
     app: frontend
 spec:
+  replicas: 3
   type: LoadBalancer
   selector:
     app: frontend
